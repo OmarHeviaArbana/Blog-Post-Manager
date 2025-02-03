@@ -1,0 +1,62 @@
+<div style="margin-left: auto; margin-right: auto">
+  <p id="postFeedback"></p>
+</div>
+<div>
+  <h1>Post form</h1>
+  <div *ngIf="loading$ | async" class="spinner-container">
+    <mat-progress-spinner
+      diameter="100"
+      class="spinner"
+      mode="indeterminate"
+      color="primary">
+    </mat-progress-spinner>
+  </div>
+  <div *ngIf="!(loading$ | async) || (loaded$ | async) ">
+    <form *ngIf="postForm" [formGroup]="postForm" (ngSubmit)="savePost()" class="container-form">
+      <mat-form-field appearance="fill" >
+        <mat-label>Title:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="title"
+          required
+        />
+        <mat-error *ngIf="title.invalid">{{getErrorTitleMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Description:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="description"
+          required
+        />
+        <mat-error *ngIf="description.invalid">{{getErrorDescriptionMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Publication date:</mat-label>
+        <input
+          matInput
+          type="date"
+          [formControl]="publication_date"
+          required
+        />
+        <mat-error *ngIf="publication_date.invalid">{{getErrorDateMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Choose categories:</mat-label>
+        <mat-select [formControl]="categories" multiple>
+          <mat-option
+            *ngFor="let category of categoriesList"
+            [value]="category.categoryId">
+            {{category.title}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!postForm.valid">SAVE</button>
+    </form>
+  </div>
+</div>

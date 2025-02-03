@@ -1,0 +1,57 @@
+<div style="margin-left: auto; margin-right: auto">
+  <p id="categoryFeedback"></p>
+</div>
+<div>
+  <h1>Category form</h1>
+  <div *ngIf="loading$ | async" class="spinner-container">
+    <mat-progress-spinner
+      diameter="100"
+      class="spinner"
+      mode="indeterminate"
+      color="primary">
+    </mat-progress-spinner>
+  </div>
+  <div *ngIf="(loaded$ | async) || !(loading$ | async) ">
+    <form
+      *ngIf="categoryForm"
+      [formGroup]="categoryForm"
+      (ngSubmit)="saveCategory()"
+      class="container-form"
+    >
+    <mat-form-field appearance="fill" >
+      <mat-label>Title:</mat-label>
+      <input
+        matInput
+        type="text"
+        [formControl]="title"
+        required
+      />
+      <mat-error *ngIf="title.invalid">{{getErrorTitleMessage()}}</mat-error>
+    </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Description:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="description"
+          required
+        />
+        <mat-error *ngIf="description.invalid">{{getErrorDescriptionMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Css color:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="css_color"
+          required
+        />
+        <mat-error *ngIf="css_color.invalid">{{getErrorCssMessage()}}</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!categoryForm.valid">SAVE</button>
+    </form>
+  </div>
+</div>

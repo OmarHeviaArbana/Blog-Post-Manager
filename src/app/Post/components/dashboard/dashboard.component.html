@@ -1,0 +1,22 @@
+
+<div class="container-title-action title-graph-section">
+  <h1>Dashboard</h1>
+</div>
+<div *ngIf="loading$ | async" class="spinner-container">
+  <mat-progress-spinner
+    diameter="100"
+    class="spinner"
+    mode="indeterminate"
+    color="primary">
+  </mat-progress-spinner>
+</div>
+<div *ngIf="(loaded$ | async) || !(loading$ | async) ">
+  <div *ngIf="posts" class="container-graphics">
+    <canvas
+      baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      chartType="bar">
+  </canvas>
+  </div>
+</div>

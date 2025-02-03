@@ -1,0 +1,23 @@
+<div class="container-posts" >
+  <div *ngIf="(loading$ | async)" class="spinner-container">
+    <mat-progress-spinner
+      diameter="100"
+      class="spinner"
+      mode="indeterminate"
+      color="primary">
+    </mat-progress-spinner>
+  </div>
+  <div *ngIf="!(loading$ | async) || (loaded$ | async) ">
+    <mat-grid-list [cols]="cols" [rowHeight]="showButtons ? 270 : 240" gutterSize="20px">
+      <mat-grid-tile *ngFor="let post of posts" [colspan]="1" [rowspan]="1">
+        <app-card
+        class="appCard"
+          [item]="post"
+          [showButtons]="showButtons"
+          (like)="like($event)"
+          (dislike)="dislike($event)">
+        </app-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

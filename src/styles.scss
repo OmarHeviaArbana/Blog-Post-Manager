@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: rgb(238, 238, 238) }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+mat-form-field {
+  margin-bottom: 10px;
+  @media  (min-width: 375px ) {
+    width: 80%;
+  }
+  @media  (min-width: 600px ) {
+    width: 50%;
+  }
+  @media  (min-width: 1200px ) {
+    width: 30%;
+  }
+
+}
+
+/* Table List */
+
+.container-component-list {
+  padding: 40px;
+}
+
+.container-title-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 30%;
+  @media  (min-width: 600px ) {
+    width: 80%;
+  }
+}
+
+.btn-table {
+  margin: 10px 5px 10px;
+  cursor: pointer;
+}
+
+/* Toolbar */
+
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-right: 40px;
+  font-weight: normal;
+  color: rgb(235, 233, 233);
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 1px solid rgb(235, 233, 233);
+}
+
+/* Spinner */
+
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(173, 172, 172, 0.4);
+  z-index: 10;
+}
+
+.spinner {
+  margin-top: 50px;
+}
+
+/* Graphics and Dashboard */
+
+.container-graphics {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.title-graph-section {
+  padding: 20px;
+}
+
+

@@ -1,0 +1,96 @@
+<div style="margin-left: auto; margin-right: auto">
+  <p id="profileFeedback"></p>
+</div>
+<div>
+  <h1>Profile</h1>
+  <div *ngIf="loading$ | async" class="spinner-container">
+    <mat-progress-spinner
+      diameter="100"
+      class="spinner"
+      mode="indeterminate"
+      color="primary">
+    </mat-progress-spinner>
+  </div>
+  <div *ngIf="!(loading$ | async) || (loaded$ | async) ">
+    <form [formGroup]="profileForm" (ngSubmit)="updateUser()" class="container-form">
+      <mat-form-field appearance="fill" >
+        <mat-label>Name:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="name"
+          required
+        />
+        <mat-error *ngIf="name.invalid">{{getErrorNameMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Surname1:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="surname_1"
+          required
+        />
+        <mat-error *ngIf="surname_1.invalid">{{getErrorSurnameOneMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Surname2:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="surname_2"
+          required
+        />
+        <mat-error *ngIf="surname_2.invalid">{{getErrorSurnameTwoMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Alias:</mat-label>
+        <input
+          matInput
+          type="text"
+          [formControl]="alias"
+          required
+        />
+        <mat-error *ngIf="alias.invalid">{{getErrorSurnameAliasMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Birth date:</mat-label>
+        <input
+          matInput
+          type="date"
+          [formControl]="birth_date"
+          required
+        />
+        <mat-error *ngIf="birth_date.invalid">{{getErrorSurnameBirthMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" >
+        <mat-label>Email:</mat-label>
+        <input
+          matInput
+          type="email"
+          [formControl]="email"
+          required
+        />
+        <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password:</mat-label>
+        <input
+          matInput
+          type="password"
+          [formControl]="password"
+          required
+        />
+        <mat-error *ngIf="password.invalid">{{getErrorPasswordMessage()}}</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Update User</button>
+    </form>
+  </div>
+</div>

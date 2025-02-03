@@ -1,0 +1,31 @@
+<mat-card class="card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title class="card-title">{{item.title}}</mat-card-title>
+    <mat-card-subtitle class="card-subtitle-container">
+      <div class="card-subtitle">
+        <mat-icon class="card-subtitle-icon" >person</mat-icon> <h4 class="card-subtitle-text"> {{ item.userAlias}}</h4>
+      </div>
+      <div class="card-subtitle">
+        <mat-icon class="card-subtitle-icon">event</mat-icon><h4 class="card-subtitle-text">{{item.publication_date | formatDate: 3 }}</h4>
+      </div>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    {{item.description}}
+  </mat-card-content>
+    <div class="category-container">
+      <mat-chip-set *ngFor="let category of item.categories" aria-label="Fish selection">
+        <mat-chip class=".mat-chip" [ngStyle]="{ 'background-color': category.css_color }"># {{ category.title }}</mat-chip>
+      </mat-chip-set>
+    </div>
+    <mat-card-actions *ngIf="showButtons" class="card-actions">
+      <button  class="btn-action-card" (click)="newLike()">
+        <span class="text-action-card" >{{item.num_likes}}</span>
+        <mat-icon class="icon-btn-action" color="primary">thumb_up</mat-icon>
+      </button>
+      <button class="btn-action-card" (click)="newDislike()">
+        <span class="text-action-card"> {{item.num_dislikes}}</span>
+        <mat-icon class="icon-btn-action" color="warn">thumb_down</mat-icon>
+      </button>
+    </mat-card-actions>
+</mat-card>
