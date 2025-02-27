@@ -13,7 +13,19 @@ Sitio web donde muestran y gestionan posts de usuario utilizando Angular Materia
 - Gestión CRUD de Categorias de Post por id de usuario con tablas, formulario reactivo y validaciones.
 - Utilzación de gráficas para mostrar al usuario autenicado las estadísticas "like" y "dislike" de los post del usuario.
 - Utilización de componentes anidados.
-- Despligue de una API REST realizada con nestjs y utilización de base de datos PostgreSQL
+- Para la gestión de la state de la data se utiliza Redux
+- Despligue de una API REST realizada con nestjs y utilización de base de datos PostgreSQL.
+
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_one.png" alt="Login">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_three.png" alt="Home not authenticated">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_two.png" alt="Dashboard_not _authenticated">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_four.png" alt="Register form">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_five.png" alt="Home authenticated">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_six.png" alt="Category list authenticated">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_seven.png" alt="Category form authenticated">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_eight.png" alt="Post list">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_nine.png" alt="Post form">
+<image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_ten.png" alt="Profiler">
   
 **Autor:** Omar Hevia Arbana
 **Fecha:** Enero 2025
@@ -35,6 +47,7 @@ Website where user posts are displayed and managed using Angular Material with R
 - CRUD management of post categories by user ID with tables, reactive form, and validations.
 - Use of charts to display statistics of "like" and "dislike" for the user's posts.
 - Use of nested components.
+- For managing the state of the data, Redux is used.
 - Deployment of a REST API built with NestJS and utilization of a PostgreSQL database.
 
 **Author:** Omar Hevia Arbana
@@ -44,8 +57,6 @@ Website where user posts are displayed and managed using Angular Material with R
 
 ## Requirements
 `npm install` = node version -> 15.14.0
-
-
 
 ## Development server
 [Node.js](http://nodejs.org/) >= 18.x
