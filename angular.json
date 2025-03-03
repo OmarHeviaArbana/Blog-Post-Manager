@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog-uoc-project-front": {
+    "blog-project-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog-uoc-project-front",
+            "outputPath": "dist/blog-project-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "blog-uoc-project-front:build:production"
+              "browserTarget": "blog-project-front:build:production"
             },
             "development": {
-              "browserTarget": "blog-uoc-project-front:build:development"
+              "browserTarget": "blog-project-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blog-uoc-project-front:build"
+            "browserTarget": "blog-project-front:build"
           }
         },
         "test": {
@@ -94,6 +94,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "codeCoverage": true,
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
@@ -109,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "blog-uoc-project-front"
+  "defaultProject": "blog-project-front"
 }

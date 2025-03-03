@@ -28,7 +28,7 @@ Sitio web donde muestran y gestionan posts de usuario utilizando Angular Materia
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_ten.png" alt="Profiler">
   
 **Autor:** Omar Hevia Arbana
-**Fecha:** Enero 2025
+**Fecha:** En proceso ...
 
 ---
 
@@ -51,7 +51,7 @@ Website where user posts are displayed and managed using Angular Material with R
 - Deployment of a REST API built with NestJS and utilization of a PostgreSQL database.
 
 **Author:** Omar Hevia Arbana
-**Date:** Enero 2025
+**Date:** In progress ...
 
 ---
 
