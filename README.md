@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Sitio web donde muestran y gestionan posts de usuario utilizando Angular Material with RxJS + NgRX + ngCharts.
+Sitio web donde muestran y gestionan posts de usuario utilizando Angular Material with RxJS + Redux + ngCharts.
 
 ## Funcionalidades
 
@@ -28,7 +28,12 @@ Sitio web donde muestran y gestionan posts de usuario utilizando Angular Materia
 <image style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; margin-bottom: 30px" src="src/assets/miniatura_ten.png" alt="Profiler">
   
 **Autor:** Omar Hevia Arbana
+<<<<<<< HEAD
 **Fecha:** En proceso ...
+=======
+
+**Fecha:** Enero 2025
+>>>>>>> 1e245773c30e13e471ac33767f3cc87d5665c5c3
 
 ---
 
@@ -36,7 +41,7 @@ Sitio web donde muestran y gestionan posts de usuario utilizando Angular Materia
 
 ## Description
 
-Website where user posts are displayed and managed using Angular Material with RxJS + NgRX + ngCharts.
+Website where user posts are displayed and managed using Angular Material with RxJS + Redux + ngCharts.
 
 ## Functionalities
 
