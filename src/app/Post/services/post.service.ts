@@ -7,11 +7,11 @@ import { SharedService } from 'src/app/Shared/Services/shared.service';
 import { PostDTO } from '../models/post.dto';
 
 interface updateResponse {
-  affected: number;
+  affected?: number;
 }
 
 interface deleteResponse {
-  affected: number;
+  affected?: number;
 }
 
 @Injectable({
@@ -58,13 +58,13 @@ export class PostService {
 
   likePost(postId: string): Observable<updateResponse> {
     return this.http
-      .put<updateResponse>(this.urlBlogUocApi + '/like/' + postId, NONE_TYPE)
+      .put<updateResponse>(this.urlBlogUocApi + '/like/' + postId, null)
       .pipe(catchError(this.sharedService.handleError));
   }
 
   dislikePost(postId: string): Observable<updateResponse> {
     return this.http
-      .put<updateResponse>(this.urlBlogUocApi + '/dislike/' + postId, NONE_TYPE)
+      .put<updateResponse>(this.urlBlogUocApi + '/dislike/' + postId, null)
       .pipe(catchError(this.sharedService.handleError));
   }
 
