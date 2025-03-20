@@ -32,7 +32,7 @@ describe('HomeComponent', () => {
       loading: false,
       loaded: true,
       error: null,
-    },
+    }
     auth: {
       loading: false,
       loaded: true,
